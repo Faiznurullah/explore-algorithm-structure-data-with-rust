@@ -58,6 +58,29 @@ fn main() {
     } else {
         println!("Element not found in the array");
     }
+
+
+    // Stack 
+    let mut stack = algorithm::stack::stack::Stack::new();
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    stack.display();
+
+    println!("Size: {}", stack.size());
+
+    if let Some(top) = stack.peek() {
+        println!("Top element: {}", top);
+    }
+
+    while !stack.is_empty() {
+        if let Some(item) = stack.pop() {
+            println!("Popped: {}", item);
+        }
+    }
+
+    stack.display();
     
 
 }
