@@ -6,3 +6,4 @@ pub mod fizzbuzz;
 pub mod sorting;
 pub mod search;
 pub mod stack;
+pub mod queue;

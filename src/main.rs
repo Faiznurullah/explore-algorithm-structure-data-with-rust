@@ -81,6 +81,34 @@ fn main() {
     }
 
     stack.display();
+
+
+    // Queue
+    let mut queue = algorithm::queue::queue::Queue::new();
+    queue.enqueue(1); 
+    queue.enqueue(2);
+    queue.enqueue(3);
+    queue.display();
+
+    if let Some(front) = queue.front() {
+        println!("Front element: {}", front);
+    }
+
+    if let Some(rear) = queue.rear() {
+        println!("Rear element: {}", rear);
+    }
+
+    while !queue.is_empty() {
+        if let Some(item) = queue.dequeue() {
+            println!("Dequeued: {}", item);
+        }
+    }
+
+    queue.display();
+
+
+
+
     
 
 }
