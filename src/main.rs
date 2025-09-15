@@ -107,6 +107,8 @@ fn main() {
     queue.display();
 
 
+    // HashMap
+    algorithm::hashmap::hashmap::try_hashmap();
 
 
     
