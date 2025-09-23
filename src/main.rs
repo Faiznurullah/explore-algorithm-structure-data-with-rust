@@ -134,6 +134,14 @@ fn main() {
     let decrypted_text2 = cryptography::vigenere::decrypt(&ciphertext3, key2);
     println!("Decrypted Text: {}", decrypted_text2);
 
+    // vernam Chiper
+    let plaintext4 = "HELLO WORLD";
+    let key3 = "XMCKL ERTYU";
+    let ciphertext4 = cryptography::vernam::encrypt(plaintext4, key3);
+    println!("Vernam Ciphertext: {}", ciphertext4);
+    let decrypted_text3 = cryptography::vernam::decrypt(&ciphertext4, key3);
+    println!("Decrypted Text: {}", decrypted_text3);
+
     
 
 }
