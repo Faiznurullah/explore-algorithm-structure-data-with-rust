@@ -149,6 +149,14 @@ fn main() {
     let decrypted_text4 = cryptography::atbash::decrypt(&ciphertext5);
     println!("Decrypted Text: {}", decrypted_text4);
 
+    // Autokey Chiper
+    let plaintext6 = "ATTACKATDAWN";
+    let keyword = "QUEEN";
+    let ciphertext6 = cryptography::autokey::encrypt(plaintext6, keyword);
+    println!("Autokey Ciphertext: {}", ciphertext6);
+    let decrypted_text5 = cryptography::autokey::decrypt(&ciphertext6, keyword);
+    println!("Decrypted Text: {}", decrypted_text5);
+
     
 
 }

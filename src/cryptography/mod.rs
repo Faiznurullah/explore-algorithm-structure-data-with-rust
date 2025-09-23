@@ -3,3 +3,4 @@ pub mod affine;
 pub mod vigenere;
 pub mod vernam;
 pub mod atbash;
+pub mod autokey;
