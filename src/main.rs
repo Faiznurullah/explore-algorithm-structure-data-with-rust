@@ -1,4 +1,5 @@
 mod algorithm;
+mod cryptography;
 
 fn main() {
     // Fibonacci of 9
@@ -109,6 +110,21 @@ fn main() {
 
     // HashMap
     algorithm::hashmap::hashmap::try_hashmap();
+
+
+    // Caesar Chiper
+    let plaintext = "HELLO WORLD";
+    let shift = 3;
+    let ciphertext = cryptography::caesar::caesar_chiper(plaintext, shift);
+    println!("Ciphertext: {}", ciphertext);
+
+    // Affine Chiper
+    let plaintext2 = "HELLO WORLD";
+    let key = 5;
+    let ciphertext2 = cryptography::affine::encrypt(plaintext2, key);
+    println!("Affine Ciphertext: {}", ciphertext2);
+    let decrypted_text = cryptography::affine::decrypt(&ciphertext2, key);
+    println!("Decrypted Text: {}", decrypted_text);
 
 
     
