@@ -126,6 +126,13 @@ fn main() {
     let decrypted_text = cryptography::affine::decrypt(&ciphertext2, key);
     println!("Decrypted Text: {}", decrypted_text);
 
+    // Vigenere Chiper
+    let plaintext3 = "HELLO WORLD";
+    let key2 = "KEY";
+    let ciphertext3 = cryptography::vigenere::encrypt(plaintext3, key2);
+    println!("Vigenere Ciphertext: {}", ciphertext3);
+    let decrypted_text2 = cryptography::vigenere::decrypt(&ciphertext3, key2);
+    println!("Decrypted Text: {}", decrypted_text2);
 
     
 
