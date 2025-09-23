@@ -142,6 +142,13 @@ fn main() {
     let decrypted_text3 = cryptography::vernam::decrypt(&ciphertext4, key3);
     println!("Decrypted Text: {}", decrypted_text3);
 
+    // Atbash Chiper
+    let plaintext5 = "HELLO WORLD";
+    let ciphertext5 = cryptography::atbash::encrypt(plaintext5);
+    println!("Atbash Ciphertext: {}", ciphertext5);
+    let decrypted_text4 = cryptography::atbash::decrypt(&ciphertext5);
+    println!("Decrypted Text: {}", decrypted_text4);
+
     
 
 }
